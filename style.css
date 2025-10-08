@@ -69,6 +69,10 @@ section h2 {
 
 /* About section */
 
+#about {
+  text-align: left;
+}
+
 /* Links */
 a {
   color: #003366;
