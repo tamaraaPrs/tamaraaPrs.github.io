@@ -69,12 +69,6 @@ section h2 {
 
 /* About section */
 
-#about img {
-  border-radius: 50%;
-  margin-top: 1rem;
-  width: 150px;
-}
-
 /* Links */
 a {
   color: #003366;
