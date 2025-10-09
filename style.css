@@ -4,7 +4,7 @@ body {
   line-height: 1.6;
   color: #333;
   margin: 0;
-  background-color: #fafafa;
+  background-color: #f3f3f7;
 }
 
 /* Header */
@@ -75,20 +75,21 @@ section h2 {
 
 /* Links */
 a {
-  color: #003366;
+  color: #025ab1;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #0055aa;
+  color: #0375e6;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #ffffff;
+  background-color: #ffffff00;
   color: rgb(0, 0, 0);
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 0.9rem;
 }
 
