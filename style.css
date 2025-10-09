@@ -103,3 +103,10 @@ footer {
     margin: 5px 0;
   }
 }
+
+/* Image styling */
+.scaled-image {
+    width: 25%;      /* scales to half the container width */
+    height: 25%;    /* keeps the aspect ratio */
+    margin-left: 20px;
+}
