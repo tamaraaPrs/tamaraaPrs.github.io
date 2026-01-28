@@ -111,3 +111,45 @@ footer {
     height: 25%;    /* keeps the aspect ratio */
     margin-left: 20px;
 }
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 auto; 
+}
+
+.event-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.event-card .date {
+  font-size: 0.9em;
+  color: #9d5516;
+  margin-bottom: 12px;
+}
+
+.event-card .session-type {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-style: italic;
+}
+
+.event-card .speaker {
+  font-size: 1.5em;
+  color: #000000;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-style: bold;
+}
