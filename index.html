@@ -9,7 +9,7 @@
 </head>
 
 <script>
-fetch('publications.json')
+fetch('publications.json', { cache: "no-store" })
   .then(res => res.json())
   .then(data => {
     const list = document.getElementById('pub-list');
@@ -24,6 +24,11 @@ fetch('publications.json')
           ${pub.url ? `
             <a href="${pub.url}" target="_blank" class="pub-icon" title="View publication">
               🔗
+            </a>
+          ` : ""}
+          ${pub.video ? `
+            <a href="${pub.video}" target="_blank" class="pub-icon" title="Watch talk">
+              🎥
             </a>
           ` : ""}
           <span class="pub-title-text">${pub.title}</span>
