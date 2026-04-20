@@ -4,9 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Governance Reading Group</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=<?= time(); ?>">
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
+
+<script>
+fetch('reading-group.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('rg-list');
+
+    data.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    data.forEach(session => {
+      const card = document.createElement('div');
+      card.classList.add('rg-card');
+
+      const date = new Date(session.date).toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
+
+      let html = `
+        <div class="rg-header">
+          <span class="rg-type ${session.type}">${session.type}</span>
+          <span class="rg-date">${date}</span>
+        </div>
+      `;
+
+      // Speaker-based session
+      if (session.type === "speaker-based") {
+        html += `
+          <div>
+            <span class="rg-speaker">${session.speaker}</span> |
+            <span class="rg-title">${session.title}</span>
+          </div>
+          <div class="rg-time">${session.time}</div>
+          <div class="rg-description"><b>Bio:</b> ${session.speaker_bio}</div>
+        `;
+      }
+
+      // Discussion-based session
+      if (session.type === "discussion-based") {
+        html += `
+          <div class="rg-title">${session.title}</div>
+          <div class="rg-time">${session.time}</div>
+          <div class="rg-description">${session.description}</div>
+          <div class="rg-paper"><b>Discussion based on the paper:</b> <em>${session.paper}</em></div>
+        `;
+      }
+
+      card.innerHTML = html;
+      container.appendChild(card);
+    });
+  });
+</script>
+
 <body>
 
   <main>
@@ -15,24 +69,9 @@
         <p>Welcome to the MILA's AI Governance Reading Group: a bi-weekly meeting to discuss AI Governance topics with researchers and students from diverse backgrounds! Each week, we alternate between <strong><em>discussion-based sessions</em></strong> (we choose a topic and a paper related to that topic, and invite everyone to read the article and come and discuss the topic) and <strong><em>speaker-based sessions</em></strong> (a speaker will come and present their research). <strong>Everyone is encouraged to join the discussion, even if you don't know much about the topic!</strong></p>
         <p>If you have any questions please reach out to Tamara Paris (<a href="mailto:tamara.paris@mail.mcgill.ca">tamara.paris@mail.mcgill.ca</a>) or Veronica Xia (<a href="mailto:veronica.xia@mila.quebec">veronica.xia@mila.quebec</a>).</p>
       </section>
-    <section id="upcoming-sessions">
-      <div class="events">
-        <h2>Upcoming Sessions</h2>
-        <div class="event-card">
-          <h3>Topic: What transparency should be required of AI companies/organizations to ensure legal accountability?</h3>
-          <p class="session-type">[Discussion-Based Session]</p>
-          <p class="date"><strong>Time:</strong> 1:00-2:00pm EST, February 5, 2026</p>
-          <p class="paper"><strong>Main paper we will discuss:</strong> "Null Compliance: NYC Local Law 144 and the challenges of algorithm accountability." Lucas Wright et al. Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency. 2024. (https://arxiv.org/abs/2406.01399)</p>
-          <p><strong>Description:</strong>We will discuss the transparency requirements that could or should be imposed on AI companies and organizations to ensure effective governance and legal compliance.</p>
-        </div>
-
-        <div class="event-card">
-          <h3>Speaker: Alan Chan</h3>
-          <p class="session-type">[Speaker-Based Session]</p>
-          <p class="date"><strong>Time:</strong> 10:00-11:00am EST, February 19, 2026</p>
-          <p><strong>Description:</strong>TBD</p>
-        </div>
-      </div>
+    <section id="reading-group">
+      <h2>Reading Group Sessions</h2>
+      <div id="rg-list" class="rg-grid"></div>
     </section>
   </main>
 

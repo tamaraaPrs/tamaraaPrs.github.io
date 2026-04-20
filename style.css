@@ -112,44 +112,135 @@ footer {
     margin-left: 20px;
 }
 
-.events {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 0 auto; 
+/* Publications */
+
+#pub-list {
+  list-style: none;
+  padding: 0;
 }
 
-.event-card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.pub-item {
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eee;
 }
 
-.event-card h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
+.pub-authors {
+  color: #444;
+  font-size: 0.95em;
+  margin: 2px 0;
 }
 
-.event-card .date {
-  font-size: 0.9em;
-  color: #9d5516;
-  margin-bottom: 12px;
-}
-
-.event-card .session-type {
+.pub-meta {
   font-size: 0.9em;
   color: #666;
-  margin-top: 0px;
-  margin-bottom: 0px;
+}
+
+.pub-status {
+  color: #b00020;
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.pub-venue {
   font-style: italic;
 }
 
-.event-card .speaker {
-  font-size: 1.5em;
-  color: #000000;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-style: bold;
+.pub-year {
+  margin-left: 6px;
+}
+
+.pub-title {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 1.05em;
+}
+
+.pub-icon {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: #666;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.pub-icon:hover {
+  color: #000;
+}
+
+.pub-title-text {
+  display: inline;
+}
+
+/* Reading Group */
+
+.rg-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 1em;
+}
+
+.rg-card {
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 14px;
+  background: #fff;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.rg-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.rg-type {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/* Optional color coding */
+.rg-type.discussion-based {
+  color: #0066cc;
+}
+
+.rg-type.speaker-based {
+  color: #b00020;
+}
+
+.rg-date {
+  font-style: italic;
+}
+
+.rg-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.rg-time {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.rg-speaker {
+  color: #7d2626;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.rg-description {
+  font-size: 0.9em;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.rg-paper {
+  font-size: 0.85em;
+  color: #555;
 }

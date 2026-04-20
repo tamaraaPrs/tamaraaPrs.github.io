@@ -2,11 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="expires" content="0">
   <title>Tamara Paris</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=<?= time(); ?>">
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
+
+<script>
+fetch('publications.json')
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById('pub-list');
+    data.sort((a, b) => b.year - a.year);
+
+    data.forEach(pub => {
+      const li = document.createElement('li');
+      li.classList.add('pub-item');
+
+      let html = `
+        <div class="pub-title">
+          ${pub.url ? `
+            <a href="${pub.url}" target="_blank" class="pub-icon" title="View publication">
+              🔗
+            </a>
+          ` : ""}
+          <span class="pub-title-text">${pub.title}</span>
+        </div>
+
+        <div class="pub-authors">${pub.authors}</div>
+        <div class="pub-meta">
+          ${pub.status ? `<span class="pub-status">[${pub.status}]</span>` : ''}
+          <span class="pub-venue">${pub.venue}</span>
+          <span class="pub-year">${pub.year}</span>
+        </div>
+      `;
+
+      li.innerHTML = html;
+      list.appendChild(li);
+    });
+  });
+</script>
+
 <body>
 
   <main>
@@ -46,24 +82,7 @@
 
     <section id="publications">
       <h2>Publications</h2>
-      <ul>
-        <li>
-          Tamara Paris, Shalaleh Rismani. 2025. <em>When Openness Fails: Lessons from System Safety for Assessing Openness in AI. </em> 
-          <strong>Symposium on Model Accountability, Sustainability and Healthcare, SMASH ’25</strong>
-        </li>
-        <li>
-          Tamara Paris. 2025. <em>From Openness to Openwashing: Framing a Debated Concept in AI. </em> 
-          <strong>MSc Thesis</strong>
-        </li>
-        <li>
-          Tamara Paris, Jin L.C. Guo, and AJung Moon. 2025. <em>“One of Silicon Valley’s Most Divisive Topics”: How the Media Discusses Openness in AI. </em> 
-          <strong>Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society, AIES ’25</strong>
-        </li>
-        <li>
-          Tamara Paris, AJung Moon, and Jin L.C. Guo. 2025. <em>Opening the Scope of Openness in AI. </em> 
-          <strong>Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency, FAccT ’25</strong>
-        </li>
-      </ul>
+      <ul id="pub-list"></ul>
     </section>
 
     <section id="contact">

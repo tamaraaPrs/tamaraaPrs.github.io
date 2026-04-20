@@ -1,0 +1,41 @@
+[
+  {
+    "status": "Accepted",
+    "authors": "Tamara Paris, AJung Moon, Jin L.C. Guo",
+    "title": "Don’t Trust the Process: When Verifiability Undermines AI Accountability",
+    "venue": "Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency, FAccT ’26",
+    "year": 2026
+  },
+
+  {
+    "authors": "Tamara Paris, Shalaleh Rismani",
+    "title": "When Openness Fails: Lessons from System Safety for Assessing Openness in AI",
+    "venue": "Symposium on Model Accountability, Sustainability and Healthcare, SMASH ’25",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2510.10732"
+  },
+
+  {
+    "authors": "Tamara Paris",
+    "title": "From Openness to Openwashing: Framing a Debated Concept in AI",
+    "venue": "MSc Thesis, McGill University",
+    "year": 2025,
+    "url": "https://escholarship.mcgill.ca/concern/theses/765376906"
+  },
+
+  {
+    "authors": "Tamara Paris, Jin L.C. Guo, AJung Moon",
+    "title": "“One of Silicon Valley’s Most Divisive Topics”: How the Media Discusses Openness in AI",
+    "venue": "Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society, AIES ’25",
+    "year": 2025,
+    "url": "https://ojs.aaai.org/index.php/AIES/article/view/36688"
+  },
+
+  {
+    "authors": "Tamara Paris, AJung Moon, Jin L.C. Guo",
+    "title": "Opening the Scope of Openness in AI",
+    "venue": "Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency, FAccT ’25",
+    "year": 2025,
+    "url": "https://dl.acm.org/doi/abs/10.1145/3715275.3732087"
+  }
+]

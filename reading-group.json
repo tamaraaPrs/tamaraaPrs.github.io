@@ -1,0 +1,42 @@
+[
+    {
+        "type": "discussion-based",
+        "date": "2026-02-05",
+        "time": "1:00 PM - 2:00 PM",
+        "title": "What transparency should be required of AI companies/organizations to ensure legal accountability?",
+        "description": "We will discuss the transparency requirements that could or should be imposed on AI companies and organizations to ensure effective governance and legal compliance.",
+        "paper": "“Null Compliance: NYC Local Law 144 and the challenges of algorithm accountability.” Lucas Wright et al. Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency. 2024."
+    },
+    {
+        "type": "speaker-based",
+        "date": "2026-02-19",
+        "time": "10:00 AM - 11:00 AM",
+        "title": "AI agents, frontier AI regulation and AI cyber resilience",
+        "speaker": "Alan Chan",
+        "speaker_bio": "Alan obtained his PhD at Mila in 2024 and is currently a Research Fellow at GovAI. He works on a variety of topics on the more technical side of AI policy. In the past, he has worked on AI agents, frontier AI regulation (especially in an EU context), and transparency. He has recently been working on AI cyber resilience."
+    },
+    {
+        "type": "discussion-based",
+        "date": "2026-03-05",
+        "time": "1:00 PM - 2:00 PM",
+        "title": "Slave to the Algorithm: Can we govern AI systems with XAI?",
+        "description": "We will discuss the limits of explainability to govern AI systems, because of how “ML explanations” function and how the GDPR describes the “right to explanation”.",
+        "paper": "“Slave to the Algorithm? Why a 'Right to an Explanation' Is Probably Not the Remedy You Are Looking For.” Lilian Edwards and Michael Veale. Duke Law & Technology Review. 2017."
+    },
+    {
+        "type": "speaker-based",
+        "date": "2026-03-19",
+        "time": "1:00 PM - 2:00 PM",
+        "title": "Neither Valid nor Reliable? Investigating the Use of LLMs as Judges",
+        "speaker": "Khaoula Chehbouni",
+        "speaker_bio": "Khaoula Chehbouni is a third year PhD Student in Computer Science at McGill University and Mila (Quebec AI Institute). She was awarded the FRQNT Doctoral Training Scholarship to research fairness and safety in large language models. She previously worked as a Senior Data Scientist at Statistics Canada. She holds a Masters in Business Intelligence from HEC Montreal, for which she was awarded the Best Thesis Award. Her research interest includes responsible AI, fairness and safety issues in large language models."
+    },
+    {
+        "type": "speaker-based",
+        "date": "2026-04-09",
+        "time": "1:00 PM - 2:00 PM",
+        "title": "Measuring What Matters: Connecting AI Ethics Evaluations to System Attributes, Hazards, and Harms",
+        "speaker": "Shalaleh Rismani",
+        "speaker_bio": "Shalaleh Rismani is a postdoctoral researcher in the School of Computer Science at McGill University and the Mila Quebec AI Institute, working with Dr. Jackie Cheung and Dr. Jin Guo. She is also part of the core writing team for the International AI Safety Report 2026 and serves as Executive Director of the Open Roboethics Institute. Her research sits at the intersection of system safety, human-computer interaction, and the societal impacts of AI and robotics. She focuses on how these technologies shape communication, creativity, and work, and how developers can better assess and mitigate risks. Her work is supported by CIFAR and IVADO fellowships. She completed her Ph.D. at McGill, focusing on system safety for AI. Outside academia, she is a longtime dancer and choreographer, and enjoys languages, travel, and cross-cultural learning."
+    }
+]
