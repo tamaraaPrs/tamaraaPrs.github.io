@@ -1,10 +1,10 @@
 [
   {
-    "status": "Accepted",
     "authors": "Tamara Paris, AJung Moon, Jin L.C. Guo",
     "title": "Don’t Trust the Process: When Verifiability Undermines AI Accountability",
     "venue": "Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency, FAccT ’26",
-    "year": 2026
+    "year": 2026,
+    "url": "https://dl-acm-org.proxy3.library.mcgill.ca/doi/abs/10.1145/3805689.3812373"
   },
 
   {
