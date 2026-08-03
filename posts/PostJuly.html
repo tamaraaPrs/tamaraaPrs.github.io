@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Favorite Paper of July 2026</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../favicon.png" type="image/png">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <a href="../index.html">About Me</a>
+    <a href="../blog.html">My favorite papers</a>
+</nav>
+
+<main class="blog-post">
+
+<h1>My Favorite Paper of <span class="post-date">July 2026</span></h1>
+
+<p class="post-author">
+    By Tamara Paris
+</p>
+
+<div class="paper-card">
+
+    <div class="paper-label">
+        Discussed paper
+    </div>
+
+    <div class="paper-meta">
+        <span class="paper-title">On the Moral Justification of Statistical Parity</span>
+        <span class="paper-date">March 2021</span>
+    </div>
+
+    <div class="paper-authors">
+        Corinna Hertweck, Christoph Heitz, and Michele Loi
+    </div>
+
+    <div class="paper-venue">
+        ACM Conference on Fairness, Accountability, and Transparency (FAccT 2021)
+    </div>
+
+    <p class="paper-links">
+        <a href="https://dl.acm.org/doi/abs/10.1145/3442188.3445936" target="_blank">📄 Read the paper</a>
+    </p>
+
+</div>
+
+<p>
+I recently took a deep dive into the fairness literature and quickly noticed an ambivalence toward statistical parity. On the one hand, it is heavily criticized for its shortcomings, many of which stem from its simplicity. On the other hand, that same simplicity is precisely what makes it one of the most widely used fairness metrics. After only a short time, I felt like I had already read everything there was to read about Statistical Parity. This article had been sitting in my “to-read” pile for quite a while, and I expected it to simply provide a rigorous framework for an understanding I already had. Well, I was wrong. 
+</p>
+
+<p>
+To explain this article in my own words, I would say that it is a response to the well-known article “The (Im)possibility of Fairness: Different Value Systems Require Different Mechanisms for Fair Decision Making” by Sorelle A. Friedler, Carlos Scheidegger, and Suresh Venkatasubramanian. I think most people who have read that famous article already have some ideas about criticisms that could be leveled against it. The original article is now 10 years old, and while I acknowledge that its ideas were very interesting and important at the time, many follow-ups published since then have highlighted weaknesses in that theory.
+</p>
+
+<p>
+But the article by Hertweck et al. goes a bit further in criticizing it. It criticizes it, then attempts to refine the framework based on that criticism, and then dismantles it again. The article makes it clear that something we thought could be abstracted with a nice-looking set of rules isn't really that easy to abstract after all. It really shows us how difficult it is to establish a fairness framework that transcends the deployment context and its subjectivity, even for a measure as simple as statistical parity. 
+</p>
+
+<p>
+But we already knew that, didn't we? I've lost count of the number of excellent papers talking about why fairness measurements are fundamentally contextual.  But this article pointed out some edge cases of this problem that I had never considered before. 
+</p>
+
+<p>
+I thought the debate over whether to apply statistical parity could be boiled down to whether we assumed certain things to be true about the structures of discrimination that already exist in the world. But their latest example in Section 5.2 made me reconsider that. In this example, they consider a system used to determine where drones should be sent to rescue civilians from drowning after a terrible flood. Since there are more people in cities, sending drones to cities first would save the most lives, but it may be considered unfair that, simply because someone lives in a rural area, their chances of being saved are significantly lower than those of someone living in the city. Therefore, statical parity may be applied in this case, or at least consider while balancing with utility. One could argue, however, that living in a rural area has nothing to do with structural discrimination that needs to be addressed, even though it may be correlated to ethnicity, gender, or age.
+</p>
+
+<p>
+This kind of example really helps me build up my own database of scenarios where I myself wouldn't know how to make a choice. Because, in addition to being relevant to the point the article is trying to make, this example is also a good illustration of a fairness/utility tradeoff; an illustration that is actually a tradeoff. In many examples I have seen in other articles, these utility/fairness tradeoffs disappear if we understand that structural discrimination also impact the validity of the measure of utility (e.g., accuracy).  
+</p>
+
+<p>
+Above all, what I particularly like about this article is that the authors are exceptionally thorough in their self-criticism. The writing style is very precise and nuanced, and I can see that they took the time to carefully consider every word and argument. It's articles like this that make me love the FAccT community. 
+</p>
+
+<p>
+If you have made it this far, I really hope this blog post has made you want to read the article, and not made you want to ask ChatGPT for a summary of it :)
+</p>
+
+</main>
+
+<footer>
+<p>© 2026 Tamara Paris</p>
+</footer>
+
+</body>
+</html>

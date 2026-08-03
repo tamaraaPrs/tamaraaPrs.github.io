@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tamara Paris | My Favorite Papers</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <a href="index.html">About Me</a>
+    <a href="blog.html">My favorite papers</a>
+</nav>
+
+<main class="blog-post">
+
+<h1>My favorite papers</h1>
+
+<p>
+Reading is by far my favorite part of research. 
+</p>
+
+<p>
+I regularly send my friends papers along with lots of excited thoughts. So, to stop spamming my friends, I decided to transform my enthusiasm into blog posts. These are some papers that particularly struck me.
+</p>
+
+<div id="blog-list" class="blog-grid"></div>
+
+</main>
+
+<footer>
+<p>© 2026 Tamara Paris</p>
+</footer>
+
+<script>
+
+fetch("posts.json", { cache: "no-store" })
+  .then(res => res.json())
+  .then(posts => {
+
+    const container = document.getElementById("blog-list");
+
+    posts.forEach(post => {
+
+      const card = document.createElement("div");
+      card.classList.add("blog-card");
+
+      card.innerHTML = `
+        <div class="paper-meta">
+            <span class="blog-title">My Favorite Paper of <span class="post-date">July 2026</span></span>
+            <span class="read-more" href="posts/first-post.html">Read more &#x2794;</span>
+        </div>
+
+        <div class="paper-card-2">
+
+            <div class="paper-meta">
+                <span class="paper-title">On the Moral Justification of Statistical Parity</span>
+                <span class="paper-date">March 2021</span>
+            </div>
+
+            <div class="paper-authors">
+                Corinna Hertweck, Christoph Heitz, and Michele Loi
+            </div>
+
+            <div class="paper-venue">
+                ACM Conference on Fairness, Accountability, and Transparency (FAccT 2021)
+            </div>
+
+        </div>
+      `;
+
+      card.onclick = () => {
+        window.location.href = post.file;
+      };
+
+      container.appendChild(card);
+
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
