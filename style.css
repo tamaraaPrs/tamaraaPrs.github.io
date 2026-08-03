@@ -7,6 +7,12 @@ body {
   background-color: #f3f3f7;
 }
 
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
 /* Blog */
 
 .blog-grid {
@@ -34,6 +40,8 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .blog-type {
@@ -182,20 +190,47 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 600px) {
-  main {
-    padding: 1rem;
+
+  body {
+    font-size: 16px;
   }
 
-  nav ul li {
-    display: block;
-    margin: 5px 0;
+  main {
+    margin: 1rem;
+    padding: 1.2rem;
+    border-radius: 8px;
   }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .scaled-image {
+    width: 180px;
+  }
+
+  .navbar {
+    gap: 1rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+
 }
 
-/* Image styling */
 .scaled-image {
-    width: 25%;      /* scales to half the container width */
-    height: 25%;    /* keeps the aspect ratio */
+    width: 220px;
+    max-width: 100%;
+    height: auto;
     margin-left: 20px;
 }
 
@@ -284,6 +319,8 @@ footer {
   font-size: 0.8em;
   color: #666;
   margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .rg-type {
@@ -333,6 +370,30 @@ footer {
 }
 
 /* Individual blog posts */
+
+@media (max-width: 600px) {
+
+    .blog-post h1 {
+        font-size: 1.8rem;
+    }
+
+    .blog-post p {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    .paper-card {
+        padding: 12px;
+        margin: 1.5em 0;
+    }
+
+    .paper-card-2 {
+        padding: 12px;
+        margin: 1.5em 0;
+    }
+
+}
 
 .blog-post {
   font-family: Georgia, "Times New Roman", serif;
