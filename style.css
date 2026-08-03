@@ -48,17 +48,17 @@ body {
   font-style: italic;
 }
 
-.blog-title {
-  font-weight: 600;
-  margin-bottom: 4px;
-  font-size: 1.2em;
-  font-family: "Helvetica", Arial, sans-serif;
-}
-
 .read-more {
   color: #003366;
   font-style: italic;
   font-size: 0.9em;
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+.blog-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 1.2em;
   font-family: "Helvetica", Arial, sans-serif;
 }
 
