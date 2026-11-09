@@ -14,19 +14,15 @@
 
 <nav class="navbar">
     <a href="index.html">About Me</a>
-    <a href="blog.html">My favorite papers</a>
+    <a href="blog.html">Papers I Love</a>
 </nav>
 
 <main class="blog-post">
 
-<h1>My favorite papers</h1>
+<h1>Papers I love - AI Ethics</h1>
 
 <p>
-Reading is by far my favorite part of research. 
-</p>
-
-<p>
-I regularly send my friends papers along with lots of excited thoughts. So, to stop spamming my friends, I decided to transform my enthusiasm into blog posts. These are some papers that particularly struck me.
+In recent years, we have seen a surge of research publications, to the point where it has become impossible to truly keep up with new work in our field or discover the classics in a new field. In this sea of publications, I often rely on recommendations from colleagues to find my next reads. This blog series has that same goal: to share papers that, in my eyes, stand out and are well worth the read.
 </p>
 
 <div id="blog-list" class="blog-grid"></div>
@@ -50,25 +46,27 @@ fetch("posts.json", { cache: "no-store" })
       const card = document.createElement("div");
       card.classList.add("blog-card");
 
+      const dateText = post["blog-date"] || "";
+
       card.innerHTML = `
         <div class="paper-meta">
-            <span class="blog-title">My Favorite Paper of <span class="post-date">July 2026</span></span>
+            <span class="blog-title">Papers I Love - <span class="post-date">${dateText}</span></span>
             <span class="read-more" href="posts/first-post.html">Read more &#x2794;</span>
         </div>
 
         <div class="paper-card-2">
 
             <div class="paper-meta">
-                <span class="paper-title">On the Moral Justification of Statistical Parity</span>
-                <span class="paper-date">March 2021</span>
+                <span class="paper-title">${post.title}</span>
+                <span class="post-date">${dateText}</span>
             </div>
 
             <div class="paper-authors">
-                Corinna Hertweck, Christoph Heitz, and Michele Loi
+                ${post.authors}
             </div>
 
             <div class="paper-venue">
-                ACM Conference on Fairness, Accountability, and Transparency (FAccT 2021)
+                ${post.venue}
             </div>
 
         </div>

@@ -1,5 +1,13 @@
 [
   {
+    "title": "The Forgotten Margins of AI Ethics",
+    "authors": "Abeba Birhane, Elayne Ruane, Thomas Laurent,  Matthew S. Brown, Johnathan Flowers, Anthony Ventresque, and Christopher L. Dancy",
+    "venue": "Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency, FAccT ’22",
+    "year": 2022,
+    "blog-date": "November 2026",
+    "file": "posts/PostNov.html"
+  },
+  {
     "title": "On the Moral Justification of Statistical Parity",
     "authors": "Corinna Hertweck, Christoph Heitz, and Michele Loi",
     "venue": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, FAccT ’21",
